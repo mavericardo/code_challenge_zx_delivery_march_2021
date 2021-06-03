@@ -13,7 +13,7 @@
 <p align="center">
   <a href="#rocket-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="https://www.codechallengezxmarcos.com.br" target="_blank">Demo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="https://www.codechallengezxmarcos.com.br" target="_blank">Demo</a>
 </p>
 
 ## :rocket: Technologies
@@ -47,4 +47,4 @@ $ npm start
 Made with 💛 by Marcos Ricardo :wave: [Get in touch!](https://www.linkedin.com/in/marcosricardo0101/)
 
 [nodejs]: https://nodejs.org/
-[https://www.npmjs.com/]: https://yarnpkg.com/
+[npm]: https://www.npmjs.com/
