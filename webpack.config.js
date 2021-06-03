@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const ReactRefreshWebPackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
 
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 module.exports = {
     mode: 'development',
     devtool: 'eval-source-map',
@@ -19,11 +21,11 @@ module.exports = {
         historyApiFallback: true,
     },
     plugins: [
-        new ReactRefreshWebPackPlugin(),
+        isDevelopment && new ReactRefreshWebPackPlugin(),
         new HtmlWebPackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html')
         })
-    ],
+    ].filter(Boolean),
     module: {
         rules: [
             {
@@ -33,8 +35,8 @@ module.exports = {
                     loader:'babel-loader',
                     options: {
                         plugins: [
-                            require.resolve('react-refresh/babel')
-                        ]
+                            isDevelopment && require.resolve('react-refresh/babel')
+                        ].filter(Boolean)
                     }
                 }
             },
